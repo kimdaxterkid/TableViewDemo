@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -24,9 +25,11 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="BBk-JV-RqX" style="IBUITableViewCellStyleDefault" id="gLS-ej-FoV">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gLS-ej-FoV" id="mo5-BU-Rgr">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BBk-JV-RqX">
+                                                    <rect key="frame" x="15" y="0.0" width="210" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -39,20 +42,57 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
-                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="hTh-20-LXY"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="jgQ-OW-bHV"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="P1w-qN-dFz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0eB-kL-a5q"/>
+                            <constraint firstItem="P1w-qN-dFz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1Cg-vV-pHt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="P1w-qN-dFz" secondAttribute="bottom" id="6IN-C4-Kyv"/>
+                            <constraint firstItem="P1w-qN-dFz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8q6-Sy-whk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="P1w-qN-dFz" secondAttribute="bottom" id="9Yj-HL-bYL"/>
+                            <constraint firstAttribute="trailing" secondItem="P1w-qN-dFz" secondAttribute="trailing" constant="20" id="FZ6-7Y-4cX"/>
+                            <constraint firstItem="P1w-qN-dFz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="XeX-MI-Eqa"/>
+                            <constraint firstItem="P1w-qN-dFz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YKj-Lv-7gb"/>
+                            <constraint firstAttribute="trailing" secondItem="P1w-qN-dFz" secondAttribute="trailing" id="YlF-HC-94e"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="P1w-qN-dFz" secondAttribute="trailing" id="vBU-oE-FT0"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="P1w-qN-dFz"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="0eB-kL-a5q"/>
+                                <exclude reference="1Cg-vV-pHt"/>
+                                <exclude reference="8q6-Sy-whk"/>
+                                <exclude reference="FZ6-7Y-4cX"/>
+                                <exclude reference="XeX-MI-Eqa"/>
+                                <exclude reference="YKj-Lv-7gb"/>
+                                <exclude reference="YlF-HC-94e"/>
+                                <exclude reference="vBU-oE-FT0"/>
+                                <exclude reference="6IN-C4-Kyv"/>
+                                <exclude reference="9Yj-HL-bYL"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="P1w-qN-dFz"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="0eB-kL-a5q"/>
+                                <include reference="1Cg-vV-pHt"/>
+                                <include reference="8q6-Sy-whk"/>
+                                <include reference="FZ6-7Y-4cX"/>
+                                <include reference="XeX-MI-Eqa"/>
+                                <include reference="YKj-Lv-7gb"/>
+                                <include reference="YlF-HC-94e"/>
+                                <include reference="vBU-oE-FT0"/>
+                                <include reference="6IN-C4-Kyv"/>
+                                <include reference="9Yj-HL-bYL"/>
                             </mask>
                         </variation>
                     </view>

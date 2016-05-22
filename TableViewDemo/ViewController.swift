@@ -9,16 +9,26 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     var restaurants = ["HunanKing","ChinaInn","HappyWork","ChineseKitchen","AsiaCafe","Charles"]
+    
     //表格里有多少个单元格
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return restaurants.count
     }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let tempCell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         tempCell.textLabel?.text = restaurants[indexPath.row]
+        tempCell.imageView?.image = UIImage(named: "restaurant")
         return tempCell
     }
+    
+    //隐藏状态条
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
